@@ -11,6 +11,7 @@ export const Input = styled.input`
   height: 40px;
   padding: 0 8px;
   margin-left: 20px;
+  font-size: 18px;
 
   ::placeholder,
   ::-webkit-input-placeholder {

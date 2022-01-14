@@ -1,9 +1,12 @@
+import ListProductsItem from '../ListProductsItem';
 import { Container } from './styles';
 
 function ListProducts() {
   return (
     <Container>
-      <div></div>
+      <ListProductsItem />
+      <ListProductsItem />
+      <ListProductsItem />
     </Container>
   );
 }
