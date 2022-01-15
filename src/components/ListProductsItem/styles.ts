@@ -23,11 +23,12 @@ export const ProductInfo = styled.article`
     justify-content: flex-start;
     margin-bottom: 32px;
 
-    h3 {
+    span.price {
       margin-right: 10px;
       font-size: 24px;
       font-weight: 400;
       color: ${(props) => props.theme.colors.dark};
+      display: block;
     }
   }
 

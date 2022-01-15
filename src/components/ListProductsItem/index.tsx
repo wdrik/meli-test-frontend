@@ -17,7 +17,7 @@ function ListProductsItem() {
 
           <ProductInfo>
             <div>
-              <h3>$ 1980</h3>
+              <span className="price">$ 1980</span>
 
               <Image
                 src="/icon_shipping.png"
