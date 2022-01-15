@@ -4,7 +4,7 @@ export const Container = styled.div``;
 
 export const Input = styled.input`
   width: 100%;
-  background: #ffffff;
+  background: ${(props) => props.theme.colors.white};
   border: 0;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;

@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import theme from '../../styles/theme';
+import Button from '../Button';
 
 import { Container } from './styles';
 
@@ -19,6 +21,10 @@ function ProductDetail({ product }: ProductDetailProps) {
         width={680}
         height={680}
       />
+
+      <Button backgroundColor={theme.colors.blue} color={theme.colors.white}>
+        Comprar
+      </Button>
     </Container>
   );
 }
