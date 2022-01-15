@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: auto;
-  max-width: 1200px;
+  max-width: 1120px;
   background: #ffffff;
   margin: 0 auto;
   border-radius: 4px;
+  text-decoration: none;
   margin-top: 20px; // TODO
 
   display: flex;
