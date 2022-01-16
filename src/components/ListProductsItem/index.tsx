@@ -1,15 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Item } from '../../contexts/appContext';
+
 import { Container, ProductInfo, Locale } from './styles';
 
-function ListProductsItem() {
+function ListProductsItem(item: Item) {
   return (
-    <Link href="/items/123">
+    <Link href={`/items/${item.id}`}>
       <a>
         <Container>
           <Image
-            src="/Screenshot_1.png"
+            src={item.picture}
             alt="Logo Mercado Livre"
             width={163}
             height={163}
@@ -17,7 +19,7 @@ function ListProductsItem() {
 
           <ProductInfo>
             <div>
-              <span className="price">$ 1980</span>
+              <span className="price">$ {item.price.amount}</span>
 
               <Image
                 src="/icon_shipping.png"
@@ -27,7 +29,7 @@ function ListProductsItem() {
               />
             </div>
 
-            <p>Apple Mackbook Air 256 SDD - Cinza Espacial Super conservado!</p>
+            <p>{item.title}</p>
           </ProductInfo>
 
           <Locale>São Paulo</Locale>

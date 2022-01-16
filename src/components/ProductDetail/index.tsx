@@ -1,23 +1,19 @@
 import Image from 'next/image';
+
+import { ProductDetailItem } from '../../pages/items/[id]';
 import theme from '../../styles/theme';
 import Button from '../Button';
 
 import { Container, Wrapper, ProductInfo, ProductDescription } from './styles';
 
-export type ProductDetailProps = {
-  product: {
-    id: string;
-    description: string;
-    price: 1000;
-  };
-};
+function ProductDetail({ item }: ProductDetailItem) {
+  console.log(item);
 
-function ProductDetail({ product }: ProductDetailProps) {
   return (
     <Container>
       <Wrapper>
         <Image
-          src="/Screenshot_1.png"
+          src={item.picture}
           alt="Logo Mercado Livre"
           width={680}
           height={680}
@@ -26,9 +22,9 @@ function ProductDetail({ product }: ProductDetailProps) {
         <ProductInfo>
           <span className="details">Novo - 234 Vendidos</span>
 
-          <h1>Apple Mackbook Air 256 SDD - Cinza Espacial Super conservado!</h1>
+          <h1>{item.title}</h1>
 
-          <span className="price">$ 1980</span>
+          <span className="price">$ {item.price.amount}</span>
 
           <Button
             backgroundColor={theme.colors.blue}
@@ -40,16 +36,9 @@ function ProductDetail({ product }: ProductDetailProps) {
       </Wrapper>
 
       <ProductDescription>
-        <h3>Product Description</h3>
+        <h3>Descrição do Produto</h3>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure a vel
-          est? Harum accusamus doloremque earum dolorum, explicabo ullam sint ad
-          rerum, pariatur velit ea autem fugit ipsum, corrupti commodi? Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Iure a vel est?
-          Harum accusamus doloremque earum dolorum, explicabo ullam sint ad
-          rerum, pariatur velit ea autem fugit ipsum, corrupti commodi?
-        </p>
+        <pre>{item.description}</pre>
       </ProductDescription>
     </Container>
   );

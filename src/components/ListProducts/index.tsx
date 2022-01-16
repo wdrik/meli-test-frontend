@@ -1,19 +1,26 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
-import AppContext from '../../contexts/appContext';
+import AppContext, { Item } from '../../contexts/appContext';
 import ListProductsItem from '../ListProductsItem';
 import { Container } from './styles';
 
 function ListProducts() {
   const { state } = useContext(AppContext);
+  const [items, setItems] = useState<Item[]>([]);
 
-  console.log('state', state);
+  useEffect(() => {
+    setItems(state.items);
+  }, [state]);
 
   return (
     <Container>
-      <ListProductsItem />
-      <ListProductsItem />
-      <ListProductsItem />
+      {items.length ? (
+        items.map((item) => <ListProductsItem key={item.id} {...item} />)
+      ) : (
+        <h3 className="message">
+          Nenhum produto encontrado para a pesquisa atual
+        </h3>
+      )}
     </Container>
   );
 }

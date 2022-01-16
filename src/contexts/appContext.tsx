@@ -1,6 +1,6 @@
 import React, { createContext, ReactNode, useState } from 'react';
 
-interface Item {
+export type Item = {
   id: string;
   title: string;
   price: {
@@ -11,25 +11,27 @@ interface Item {
   picture: string;
   condition: string;
   free_shipping: string;
-}
+  sold_quantity?: number;
+  description?: string;
+};
 
-interface Author {
+type Author = {
   name: string;
   lastname: string;
-}
+};
 
-interface AppContext {
+export interface IAppContext {
   author: Author;
   categories: string[];
   items: Item[];
 }
 
-interface PropsAppContext {
-  state: AppContext;
-  setState: React.Dispatch<React.SetStateAction<AppContext>>;
+interface IPropsAppContext {
+  state: IAppContext;
+  setState: React.Dispatch<React.SetStateAction<IAppContext>>;
 }
 
-interface AppContextProviderProps {
+interface IAppContextProviderProps {
   children: ReactNode;
 }
 
@@ -45,9 +47,9 @@ const DEFAULT_VALUE = {
   setState: () => {},
 };
 
-const AppContext = createContext({} as PropsAppContext);
+const AppContext = createContext({} as IPropsAppContext);
 
-function AppContextProvider({ children }: AppContextProviderProps) {
+function AppContextProvider({ children }: IAppContextProviderProps) {
   const [state, setState] = useState(DEFAULT_VALUE.state);
 
   return (

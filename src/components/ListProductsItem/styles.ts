@@ -8,7 +8,6 @@ export const Container = styled.div`
   margin: 0 auto;
   border-radius: 4px;
   text-decoration: none;
-  margin-top: 20px; // TODO
 
   display: flex;
 `;

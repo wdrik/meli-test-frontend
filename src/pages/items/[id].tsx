@@ -2,11 +2,15 @@ import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
 import Header from '../../components/Header';
-import ProductDetail, {
-  ProductDetailProps,
-} from '../../components/ProductDetail';
+import ProductDetail from '../../components/ProductDetail';
+import { Item } from '../../contexts/appContext';
+import { api } from '../../services/api';
 
-function Items({ product }: ProductDetailProps) {
+export interface ProductDetailItem {
+  item: Item;
+}
+
+function Items(item: ProductDetailItem) {
   return (
     <div>
       <Head>
@@ -16,25 +20,20 @@ function Items({ product }: ProductDetailProps) {
       <main>
         <Header />
 
-        <ProductDetail product={product} />
+        <ProductDetail {...item} />
       </main>
     </div>
   );
 }
 
-// SSR - Server Side Rendering
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { id } = context.query;
 
-  console.log(id);
+  const response = await api.get(`items/${id}`);
 
   return {
     props: {
-      product: {
-        id,
-        description: 'Testeee',
-        price: 1000,
-      },
+      item: response.data.item,
     },
   };
 };
