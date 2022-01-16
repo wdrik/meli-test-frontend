@@ -8,6 +8,7 @@ export const Container = styled.form`
 export const Input = styled.input`
   width: 100%;
   background: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.gray};
   border: 0;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -22,6 +23,11 @@ export const Input = styled.input`
   }
   :-ms-input-placeholder {
     color: ${(props) => props.theme.colors.gray};
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 12px;
+    font-size: 14px;
   }
 `;
 

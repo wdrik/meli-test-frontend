@@ -3,39 +3,49 @@ import Link from 'next/link';
 
 import { Item } from '../../contexts/appContext';
 
-import { Container, ProductInfo, Locale } from './styles';
+import { Container, ProductInfo, Locale, Figure } from './styles';
 
 function ListProductsItem(item: Item) {
   return (
-    <Link href={`/items/${item.id}`}>
-      <a>
-        <Container>
-          <Image
-            src={item.picture}
-            alt="Logo Mercado Livre"
-            width={163}
-            height={163}
-          />
+    <Container>
+      <Link href={`/items/${item.id}`}>
+        <a>
+          <Figure>
+            <Image
+              src={item.picture}
+              alt={`Imagem: ${item.title}`}
+              layout="fill"
+              objectFit="cover"
+            />
+          </Figure>
 
           <ProductInfo>
             <div>
-              <span className="price">$ {item.price.amount}</span>
+              <span className="price">
+                {item.price.amount.toLocaleString('es-ar', {
+                  style: 'currency',
+                  currency: 'ARS',
+                  minimumFractionDigits: 2,
+                })}
+              </span>
 
-              <Image
-                src="/icon_shipping.png"
-                alt="Shipping"
-                width={18}
-                height={18}
-              />
+              {item.free_shipping && (
+                <Image
+                  src="/icon_shipping.png"
+                  alt="Shipping"
+                  width={18}
+                  height={18}
+                />
+              )}
             </div>
 
             <p>{item.title}</p>
           </ProductInfo>
 
-          <Locale>São Paulo</Locale>
-        </Container>
-      </a>
-    </Link>
+          <Locale>{item.seller_address_city}</Locale>
+        </a>
+      </Link>
+    </Container>
   );
 }
 

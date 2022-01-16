@@ -43,13 +43,18 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
+          <meta name="description" content="Mercado Livre" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=optional"
             rel="stylesheet"
           />
 
-          <link rel="icon" href="/favicon.ico" />
+          <link
+            rel="icon"
+            href="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.5/mercadolibre/favicon.svg"
+          />
         </Head>
 
         <body>

@@ -10,6 +10,7 @@ export const Container = styled.button<{
   border-radius: 4px;
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => props.color};
+  font-size: 16px;
 
   cursor: pointer;
   flex: 1;

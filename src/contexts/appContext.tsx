@@ -13,6 +13,7 @@ export type Item = {
   free_shipping: string;
   sold_quantity?: number;
   description?: string;
+  seller_address_city?: string;
 };
 
 type Author = {

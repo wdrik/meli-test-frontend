@@ -15,6 +15,8 @@ function SearchBar() {
   async function handleSearch(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
+    if (!text) return;
+
     const response = await api.get(`/items?q=${text}`);
 
     const newState: IAppContext = {

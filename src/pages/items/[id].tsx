@@ -10,17 +10,19 @@ export interface ProductDetailItem {
   item: Item;
 }
 
-function Items(item: ProductDetailItem) {
+function Items({ item }: ProductDetailItem) {
   return (
     <div>
       <Head>
-        <title>Items</title>
+        <title>{item.title}</title>
+
+        <meta name="description" content={item.title} />
       </Head>
 
       <main>
         <Header />
 
-        <ProductDetail {...item} />
+        <ProductDetail item={item} />
       </main>
     </div>
   );

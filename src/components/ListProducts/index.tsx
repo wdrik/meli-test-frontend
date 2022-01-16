@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 
 import AppContext, { Item } from '../../contexts/appContext';
 import ListProductsItem from '../ListProductsItem';
-import { Container } from './styles';
+import { Container, Wrapper, Divider } from './styles';
 
 function ListProducts() {
   const { state } = useContext(AppContext);
@@ -14,13 +14,20 @@ function ListProducts() {
 
   return (
     <Container>
-      {items.length ? (
-        items.map((item) => <ListProductsItem key={item.id} {...item} />)
-      ) : (
-        <h3 className="message">
-          Nenhum produto encontrado para a pesquisa atual
-        </h3>
-      )}
+      <Wrapper>
+        {items.length ? (
+          items.map((item, index) => (
+            <>
+              <ListProductsItem key={item.id} {...item} />
+              {index < items.length - 1 && <Divider />}
+            </>
+          ))
+        ) : (
+          <h3 className="message">
+            Nenhum produto encontrado para a pesquisa...
+          </h3>
+        )}
+      </Wrapper>
     </Container>
   );
 }

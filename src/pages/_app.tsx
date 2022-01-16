@@ -1,7 +1,8 @@
+import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import { AppContextProvider } from '../contexts/appContext';
 
+import { AppContextProvider } from '../contexts/appContext';
 import GlobalStyle from '../styles/global';
 import theme from '../styles/theme';
 
