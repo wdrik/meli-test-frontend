@@ -1,4 +1,8 @@
-![Logo of the project](https://github.com/wdrik/meli-test-frontend/blob/main/public/logo_ml.png)
+<p align="center">
+  <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/logo_ml.png" />
+
+  <h3>Test Front-end Mercado Livre</h3>
+</p>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
