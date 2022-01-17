@@ -1,11 +1,11 @@
 <p align="center">
   <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/logo_ml.png" />
 
-  <h2 align="center">Test Front-end Mercado Livre</h2>
+  <h2 align="center">Test Front-end Mercado Livre :v: :octocat:</h2>
 </p>
 
 <p align="left">
-  <h3>1 - ...</h3>
+  <h3>1 - Fill in the search bar to find a product</h3>
   <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/screenshot_1.png" />
 
   <h3>2 - ...</h3>
