@@ -1,17 +1,17 @@
 <p align="center">
   <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/logo_ml.png" />
 
-  <h2 align="center">Test Front-end Mercado Livre :v: :octocat:</h2>
+  <h2 align="center">Test Front-end Mercado Livre :v:</h2>
 </p>
 
 <p align="left">
-  <h3>1 - Fill in the search bar to find a product</h3>
+  <h3>1 - Fill in the search bar to find a product :mag:</h3>
   <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/screenshot_1.png" />
 
-  <h3>2 - ...</h3>
+  <h3>2 - Select an item from the list :grey_exclamation:</h3>
   <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/screenshot_2.png" />
 
-  <h3>2 - ...</h3>
+  <h3>3 - Product details page :clap:</h3>
   <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/screenshot_3.png" />
 </p>
 
