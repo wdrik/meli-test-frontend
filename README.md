@@ -14,6 +14,10 @@ npm run dev
 yarn dev
 ```
 
+## Dependency
+
+Run [backend repository:](https://github.com/wdrik/meli-test-backend) https://github.com/wdrik/meli-test-backend
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
@@ -28,10 +32,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   <h3>3 - Product details page :clap:</h3>
   <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/screenshot_3.png" />
 </p>
-
-## Dependency
-
-[backend repository:](https://github.com/wdrik/meli-test-backend)
 
 ## Tests script
 
