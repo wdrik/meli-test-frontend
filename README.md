@@ -29,6 +29,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   <img src="https://github.com/wdrik/meli-test-frontend/blob/main/public/screenshot_3.png" />
 </p>
 
+## Tests script
+
+```bash
+npm run test
+# or
+yarn test
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
