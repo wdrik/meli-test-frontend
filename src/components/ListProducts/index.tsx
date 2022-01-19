@@ -17,10 +17,10 @@ function ListProducts() {
       <Wrapper>
         {items.length ? (
           items.map((item, index) => (
-            <>
-              <ListProductsItem key={item.id} {...item} />
+            <div key={item.id}>
+              <ListProductsItem {...item} />
               {index < items.length - 1 && <Divider />}
-            </>
+            </div>
           ))
         ) : (
           <h3 className="message">

@@ -1,4 +1,3 @@
-import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
