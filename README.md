@@ -16,7 +16,7 @@ yarn dev
 
 ## Dependency
 
-Run [backend repository:](https://github.com/wdrik/meli-test-backend) https://github.com/wdrik/meli-test-backend
+Run backend repository: [](https://github.com/wdrik/meli-test-backend) https://github.com/wdrik/meli-test-backend
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
